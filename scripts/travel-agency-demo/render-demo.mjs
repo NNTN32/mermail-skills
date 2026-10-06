@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
 import { existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
-const skillDir = resolve(scriptDir, "..");
-const transcriptPath = join(skillDir, "assets", "demo-transcript.json");
+const transcriptPath = join(scriptDir, "demo-transcript.json");
 const transcript = JSON.parse(readFileSync(transcriptPath, "utf8"));
 const requested = process.argv.find((arg) => arg.startsWith("--session="))?.split("=")[1];
 const outputRoot = process.env.MERMAIL_DEMO_OUTPUT_DIR || "/tmp/mermail-travel-agency-demo";

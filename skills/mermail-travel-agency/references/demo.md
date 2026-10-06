@@ -125,10 +125,10 @@ Record both demos without voice-over or an audio track. Animate user commands an
 
 ## Reproducible render
 
-The sanitized transcript and sparse subtitle cues live in [`../assets/demo-transcript.json`](../assets/demo-transcript.json). Render both silent videos on macOS with:
+The sanitized transcript, sparse subtitle cues, and maintainer-only renderer live outside the installable skill in `scripts/travel-agency-demo/`. Render both silent videos on macOS with:
 
 ```bash
-node skills/mermail-travel-agency/scripts/render-demo.mjs
+node scripts/travel-agency-demo/render-demo.mjs
 ```
 
 Set `MERMAIL_DEMO_OUTPUT_DIR` to choose another output directory, or pass `--session=install-first-use` or `--session=complete-consultation` to render one video. The renderer uses macOS Quick Look for deterministic terminal frames and FFmpeg for H.264 output. The generated videos contain no audio stream.
