@@ -102,19 +102,33 @@ npx skills add Nudgen-Marketing/mermail-skills --skill mermail-travel-agency --a
 
 Use the rehearsal prompts above in the terminal. For a public recording, show actual local Codex output for read-only fixture interactions. Replay an already verified delivery result instead of sending the same demo email again, and label that scene clearly as a controlled rehearsal replay.
 
+Record both demos without voice-over or an audio track. Animate user commands and prompts with a visible cursor, reveal agent output incrementally, and use concise burned-in English subtitles for context. Do not use narrated slides or static presentation cards.
+
 ## Recording outline
 
-- **0:00–0:33 — Install:** Install the focused skill and show its project path.
-- **0:33–1:07 — Clarify:** Invoke `$mermail-travel-agency` and show the consolidated clarification draft.
-- **1:07–1:41 — Propose:** Show the clarified brief and both exact VND calculations.
-- **1:41–2:10 — Review:** Show inclusions, exclusions, validity, and unresolved availability.
-- **2:10–2:43 — Approve:** Replay the verified frozen-payload approval and delivered same-thread reply without sending again.
-- **2:43–3:17 — Revise:** Lower the budget, create `TA-DEMO-001-v2`, and stop for fresh approval.
-- **3:17–3:46 — Safety:** Summarize scan, isolation, privacy, and no-booking boundaries.
-- **3:46–4:09 — Validate:** Run remote validation and show the unsent final revision.
+### Terminal installation and interaction
+
+- **0:00–0:08 — Install:** Type the branch and focused-skill installation commands.
+- **0:08–0:15 — Start:** Launch Codex and show automatic skill discovery.
+- **0:15–0:23 — Clarify:** Invoke `$mermail-travel-agency` and draft one clarification.
+- **0:23–0:32 — Propose:** Reveal both exact VND calculations incrementally.
+- **0:32–0:40 — Approve:** Replay the verified delivery result without sending again.
+- **0:40–0:48 — Revise:** Create `TA-DEMO-001-v2` and stop for fresh approval.
+- **0:48–0:55 — Validate:** Run validation and show the final unsent state.
+
+### Customer inquiry to safe proposal
+
+- **0:00–0:08 — Inbound:** Type the mailbox request and inspect one clean-scanned inquiry.
+- **0:08–0:16 — Draft:** Type the clarification request and reveal the draft line by line.
+- **0:16–0:24 — Follow-up:** Continue from the customer's completed trip brief.
+- **0:24–0:32 — Match:** Calculate eligible catalog options.
+- **0:32–0:40 — Preview:** Freeze inclusions, exclusions, validity, recipients, and totals.
+- **0:40–0:48 — Deliver:** Replay the approved same-thread result without a duplicate send.
+- **0:48–0:56 — Revision:** Apply the lower budget and invalidate the old approval.
+- **0:56–1:04 — Handoff:** End at a human booking check rather than autonomous booking.
 
 Before recording, hide workspace IDs, account email, access tokens, session IDs, browser notifications, unrelated inbox content, and developer panels. Use only the test mailbox and synthetic recipients under the recorder's control. Do not imply that a replayed delivery result is a new live send.
 
 ## GitHub demo video
 
-Export an H.264 MP4 for broad browser compatibility and keep it within the repository owner's GitHub video-upload limit. Inspect the recording for secrets and private data before uploading. The current GitHub CLI supports `gh issue edit 484 --attach PATH/TO/demo.mp4` and `gh pr edit 485 --attach PATH/TO/demo.mp4`; capture the resulting GitHub attachment URL and place it on its own line under `## Demo video` in both bodies. Label the terminal recording separately from any product walkthrough. Open each page in a signed-out browser and play every video before marking the demo complete. Until a real reviewed recording exists, keep `Pending recording` and do not use a placeholder link.
+Export silent H.264 MP4 files for broad browser compatibility and keep them within the repository owner's GitHub video-upload limit. Confirm that each file contains a video stream and no audio stream. Inspect the recordings and subtitles for secrets and private data before uploading. The current GitHub CLI supports `gh issue edit 484 --attach PATH/TO/demo.mp4` and `gh pr edit 485 --attach PATH/TO/demo.mp4`; capture the resulting GitHub attachment URL and place it on its own line under `## Demo video` in both bodies. Label the terminal installation demo separately from the customer workflow demo. Open each page in a signed-out browser and play every video before marking the demo complete. Until real reviewed recordings exist, keep `Pending recording` and do not use placeholder links.
