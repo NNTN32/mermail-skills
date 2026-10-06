@@ -98,4 +98,4 @@ Before recording, hide workspace IDs, account email, access tokens, browser noti
 
 ## GitHub demo video
 
-Export an MP4 compatible with GitHub attachments. Inspect the recording for secrets and private data before uploading. Add the GitHub attachment URL on its own line under `## Demo video` in both the proposal Issue and draft PR, then verify the inline player from each page. Until a real reviewed recording exists, keep `Pending recording` and do not use a placeholder link.
+Export an H.264 MP4 for broad browser compatibility and keep it within the repository owner's GitHub video-upload limit. Inspect the recording for secrets and private data before uploading. The current GitHub CLI supports `gh issue edit 484 --attach PATH/TO/demo.mp4` and `gh pr edit 485 --attach PATH/TO/demo.mp4`; capture the resulting GitHub attachment URL and place it on its own line under `## Demo video` in both bodies. Open each page in a signed-out browser and play the video before marking the demo complete. Until a real reviewed recording exists, keep `Pending recording` and do not use a placeholder link.
